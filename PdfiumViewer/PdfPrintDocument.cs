@@ -157,7 +157,7 @@ namespace PdfiumViewer
                     Swap(ref height, ref width);
                     Swap(ref left, ref top);
                 }
-
+               
                 RenderPage(e, _currentPage, left, top, width, height);
                 _currentPage++;
             }
@@ -186,6 +186,12 @@ namespace PdfiumViewer
 
             left += (width - scaledWidth) / 2;
             top += (height - scaledHeight) / 2;
+            if (this.OriginAtMargins)
+            {
+                left = e.PageSettings.Margins.Left;
+                top = e.PageSettings.Margins.Top;
+            }
+
 
             _document.Render(
                 page,

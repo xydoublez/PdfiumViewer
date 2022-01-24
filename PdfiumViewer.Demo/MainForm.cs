@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
@@ -192,11 +193,31 @@ namespace PdfiumViewer.Demo
 
         private void printPreviewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (var form = new PrintPreviewDialog())
             {
-                form.Document = pdfViewer1.Document.CreatePrintDocument(pdfViewer1.DefaultPrintMode);
-                form.ShowDialog(this);
+                using (var printDocument = pdfViewer1.Document.CreatePrintDocument())
+                {
+                    printDocument.PrinterSettings.PrinterName = "FinePrint";
+                    printDocument.OriginAtMargins = true;
+                    printDocument.DefaultPageSettings.Margins.Left = 30;
+                    printDocument.DefaultPageSettings.Margins.Top = 30;
+                    printDocument.DefaultPageSettings.PaperSize = new PaperSize("16K", 776, 1075);
+                    //printDocument.DefaultPageSettings.PaperSize = new PaperSize("A4", 827, 1169);
+                    printDocument.QueryPageSettings += PrintDocument_QueryPageSettings;
+                    printDocument.Print();
+                }
             }
+        }
+
+        private void PrintDocument_QueryPageSettings(object sender, QueryPageSettingsEventArgs e)
+        {
+            
+            System.Diagnostics.Trace.WriteLine(e.PageSettings.HardMarginX);
+            System.Diagnostics.Trace.WriteLine(e.PageSettings.HardMarginY);
+        }
+
+        private void PrintDocument_BeginPrint(object sender, PrintEventArgs e)
+        {
+             
         }
 
         private void _fitWidth_Click(object sender, EventArgs e)
