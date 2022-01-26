@@ -186,8 +186,8 @@ namespace PdfiumViewer
 
             left += (width - scaledWidth) / 2;
             top += (height - scaledHeight) / 2;
-            //若打印机的物理边距不等于0，则强制left等2个物理边距
-            if (e.PageSettings.HardMarginX != 0)
+            //若打印机的物理边距不等于0且纸张是16K，则强制left等2个物理边距
+            if (e.PageSettings.HardMarginX != 0 && e.PageSettings.PaperSize.PaperName.ToLower() == "16k" )
             {
                 left = 2 * e.PageSettings.HardMarginX;
             }
