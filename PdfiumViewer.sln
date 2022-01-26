@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfiumViewer", "PdfiumViewer\PdfiumViewer.csproj", "{438914B6-5D1C-482C-B942-5C0E057EEF6F}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfiumViewer.WPFDemo", "PdfiumViewer.WPFDemo\PdfiumViewer.WPFDemo.csproj", "{CBD6C52A-F0F4-48B8-957B-8CAD54ACD837}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfiumViewer.Test", "PdfiumViewer.Test\PdfiumViewer.Test.csproj", "{61083268-3F14-47B7-8753-AF69BB3D0891}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testPrinter", "testPrinter\testPrinter.csproj", "{21853740-6CC9-409D-B195-FB4558F2C151}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,8 +70,23 @@ Global
 		{61083268-3F14-47B7-8753-AF69BB3D0891}.Release|x64.ActiveCfg = Release|Any CPU
 		{61083268-3F14-47B7-8753-AF69BB3D0891}.Release|x64.Build.0 = Release|Any CPU
 		{61083268-3F14-47B7-8753-AF69BB3D0891}.Release|x86.ActiveCfg = Release|Any CPU
+		{21853740-6CC9-409D-B195-FB4558F2C151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21853740-6CC9-409D-B195-FB4558F2C151}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21853740-6CC9-409D-B195-FB4558F2C151}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{21853740-6CC9-409D-B195-FB4558F2C151}.Debug|x64.Build.0 = Debug|Any CPU
+		{21853740-6CC9-409D-B195-FB4558F2C151}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{21853740-6CC9-409D-B195-FB4558F2C151}.Debug|x86.Build.0 = Debug|Any CPU
+		{21853740-6CC9-409D-B195-FB4558F2C151}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21853740-6CC9-409D-B195-FB4558F2C151}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21853740-6CC9-409D-B195-FB4558F2C151}.Release|x64.ActiveCfg = Release|Any CPU
+		{21853740-6CC9-409D-B195-FB4558F2C151}.Release|x64.Build.0 = Release|Any CPU
+		{21853740-6CC9-409D-B195-FB4558F2C151}.Release|x86.ActiveCfg = Release|Any CPU
+		{21853740-6CC9-409D-B195-FB4558F2C151}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {733CF3FB-779D-4D8C-873A-017986A2F52F}
 	EndGlobalSection
 EndGlobal

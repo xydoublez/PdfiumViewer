@@ -194,14 +194,16 @@ namespace PdfiumViewer.Demo
         private void printPreviewToolStripMenuItem_Click(object sender, EventArgs e)
         {
             {
-                using (var printDocument = pdfViewer1.Document.CreatePrintDocument())
+                using (var printDocument = pdfViewer1.Document.CreatePrintDocument(PdfPrintMode.ShrinkToMargin))
                 {
-                    printDocument.PrinterSettings.PrinterName = "FinePrint";
-                    printDocument.OriginAtMargins = true;
+                    printDocument.PrinterSettings.PrinterName = "HP LaserJet 1020";
+                    //printDocument.PrinterSettings.PrinterName = "FinePrint";
+                    //printDocument.OriginAtMargins = true;
                     printDocument.DefaultPageSettings.Margins.Left = 30;
                     printDocument.DefaultPageSettings.Margins.Top = 30;
                     printDocument.DefaultPageSettings.PaperSize = new PaperSize("16K", 776, 1075);
                     //printDocument.DefaultPageSettings.PaperSize = new PaperSize("A4", 827, 1169);
+                    //printDocument.DefaultPageSettings.PaperSize = new PaperSize("16K", 768, 1063);
                     printDocument.QueryPageSettings += PrintDocument_QueryPageSettings;
                     printDocument.Print();
                 }

@@ -7,3 +7,5 @@ Thumbs.db
 /_ReSharper*
 /packages
 /.vs
+/testPrinter/bin/Debug
+/testPrinter/obj/Debug
